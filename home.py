@@ -11,7 +11,7 @@ def index():
         initial_sidebar_state='collapsed'
     )
     st.markdown(
-        "<h1 style='text-align: center;'>RichieRich</h1>",
+        "<h1 style='text-align: center;'>StockDragon</h1>",
         unsafe_allow_html=True
     )
     st.divider()
