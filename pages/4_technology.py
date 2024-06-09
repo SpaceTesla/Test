@@ -80,5 +80,6 @@ By integrating these technologies, StockDragon Gen 1 delivers a powerful tool fo
 """,
         unsafe_allow_html=True
     )
+    st.image('design.drawio.png', caption='System Design', use_column_width=True)
 
 technology()
