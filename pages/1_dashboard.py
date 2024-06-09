@@ -62,15 +62,17 @@ def search():
             text_area+= f"{key}: {value}\n\n"
         st.text_area('Document Summary', value=text_area, height=400, help='Powered by Gemini')
     
-    # if (st.button('Download Summary', use_container_width=True)):
-    #     with open("summary.json", "r") as file:
-    #         summary_data = json.load(file)
+    # Assuming 'summary.pdf' exists in your current directory or specify the path
+        file_path = 'summary.json'
 
-    #     with open("summary_text.txt", "w") as file:
-    #         file.write(summary_data)
-
-    #     create_pdf("summary_text.txt", "summary.pdf")
-    #     st.success('Summary downloaded successfully!', icon=':material/check_circle:')
+        # Check if the button is clicked
+        with open(file_path, "r") as pdf_file:
+    # Create a download button and use the content of the pdf file directly
+            st.download_button(label="Download Summary PDF",
+                            data=pdf_file,
+                            file_name="summary.pdf",
+                            mime="application/octet-stream",
+                            use_container_width=True)
 
     st.divider()
 
