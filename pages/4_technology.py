@@ -15,7 +15,7 @@ def technology():
 
     st.markdown(
         """
-# Technology Stack and Project Flow of StockDragon Gen 1
+# Project Flow of StockDragon Gen 1
 
 ## Technology Stack
 
