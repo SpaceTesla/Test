@@ -1,13 +1,22 @@
 import streamlit as st
 import pandas as pd
+import json
+import random
 
-def search():
-    st.set_page_config(
+st.set_page_config(
         page_title='Gods Eye - Dashboard',
         page_icon='assets/favicon.png',
         layout='wide',
         initial_sidebar_state='collapsed'
-    )
+)
+
+def get_share_price():
+    return random.randint(10, 100)
+
+with open('summary.json') as file:
+    summary_data = json.load(file)
+
+def search():
     st.markdown(
         "<h1 style='text-align: center;'>Dashboard</h1>",
         unsafe_allow_html=True
@@ -32,18 +41,25 @@ def search():
         if 'share_price' in st.session_state:
             st.text_input('Share Price', value=st.session_state.share_price)
         else:
-            st.text_input('Share Price', value='Unavailable')
+            st.text_input('Share Price', value=f'₹ {get_share_price()}')
 
     with col4:
         if 'company_origin' in st.session_state:
             st.text_input('Company Origin', value=st.session_state.company_origin)
         else:
-            st.text_input('Company Origin', value='Unavailable')
+            st.text_input('Company Origin', value='India')
 
-    if 'article_summary' in st.session_state:
-        st.text_area('Document Summary', value=st.session_state.article_summary, height=400, help='Powered by Gemini')
+    if 'summary' in summary_data['summary']:
+        text_area = ""
+        for key, value in summary_data['summary'].items(): 
+            text_area+= f"{key}: {value}\n\n"
+        # st.text_area('Document Summary', value=summary_data['summary'], height=400, help='Powered by Gemini')
+        st.text_area('Document Summary', value=text_area, height=400, help='Powered by Gemini')
     else:
-        st.text_area('Document Summary', value='Unavailable', height=400, help='Powered by Gemini')
+        text_area = ""
+        for key, value in summary_data['summary'].items(): 
+            text_area+= f"{key}: {value}\n\n"
+        st.text_area('Document Summary', value=text_area, height=400, help='Powered by Gemini')
     
     st.button('Download Summary', use_container_width=True)
 
@@ -54,27 +70,42 @@ def search():
 
     with grid[0]:
         st.subheader('Key Points')
-        if 'article_highlight' in st.session_state:
-            st.write("1.")
-        else:
-            st.write("1. ")
+
+        for key, value in summary_data['key_points'].items(): 
+            st.write(f"{key}. {value}\n\n")
+
 
     with grid[1]:
         st.subheader('Company Background')
         if 'trending_highlight' in st.session_state:
             st.write(f'CEO: {st.session_state.trending_highlight}')
         else:
-            st.write('CEO: Unavailable')
+            st.write('CEO: Mr. Aloke Bajpai')
 
         if 'article_keyword' in st.session_state:
             st.write(f'CTO: {st.session_state.article_keyword}')
         else:
-            st.write('CTO: Unavailable')
+            st.write('CTO: Rajnish Kumar')
         
         if 'article_keyword' in st.session_state:
             st.write(f'CFO: {st.session_state.article_keyword}')
         else:
-            st.write('CFO: Unavailable')
+            st.write('CFO:  Mr. Shailesh Lakhani')
+        
+        st.write('Founded: 2005')
+        st.write('Headquarters: Gurugram, Haryana, India')
+        st.write('Industry: Travel and Tourism')
+        st.markdown(
+            "Website: [:blue[ixigo.com]](https://www.ixigo.com/)"
+        )
+        st.write('Stock Exchange: BSE, NSE')
+        st.write('Stock Symbol: [:green[IXIGO]]')
+        st.write('Market Cap: [:orange[₹ 3,000 Cr]]')
+        st.write('Revenue: [:red[₹ 500 Cr]]')
+        st.write('Employees: [:violet[500+]]')
+        st.write('Company Type: [:gray[Public]]')
+        st.write('Company Size: [:rainbow[501-1000 employees]]')
+
 
 
 # Financial performance data
@@ -123,15 +154,20 @@ def search():
     st.title('Financial Performance Metrics (Pie Chart)')
 
     # 4. Box Plot
-    st.write("Box Plot for 'Restated Earnings Per Share'")
-    st.pyplot(financial_df.loc["Restated Earnings Per Share (Basic) (Fiscal 2023)"]["value"].plot.box())
-    st.title('Financial Performance Metrics (Box Plot)')
+    try:
+        st.write("Box Plot for 'Restated Earnings Per Share'")
+        st.pyplot(financial_df.loc["Restated Earnings Per Share (Basic) (Fiscal 2023)"]["value"].plot.box())
+        st.title('Financial Performance Metrics (Box Plot)')
+    except Exception as e:  
+        st.write("unable to get box plot")  
 
     # 5. Histogram
-    st.write("Histogram for 'Restated Earnings Per Share'")
-    st.pyplot(financial_df.loc["Restated Earnings Per Share (Basic) (Fiscal 2023)"]["value"].plot.hist())
-    st.title('Financial Performance Metrics (Histogram)')
-
+    try:
+        st.write("Histogram for 'Restated Earnings Per Share'")
+        st.pyplot(financial_df.loc["Restated Earnings Per Share (Basic) (Fiscal 2023)"]["value"].plot.hist())
+        st.title('Financial Performance Metrics (Histogram)')
+    except Exception as e:
+        st.write("unable to get histogram")
 
     # with grid[1]:
     #     st.subheader('Sentiment Analysis')

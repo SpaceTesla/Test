@@ -42,5 +42,6 @@ def bot(document_data):
 
     filtered_response = bot_response.text.replace('```python', '').replace('```', '')
     json_output = json.dumps(eval(filtered_response), indent=4)
-    print(json_output)
+    with open('summary.json', 'w') as file:
+        file.write(json_output)
 

@@ -2,6 +2,8 @@ import streamlit as st
 import json
 from datetime import datetime
 from utils import custom_css, person_card
+from pdf_to_text import extract_sections
+from create_pdf import create_pdf
 
 def index():
     st.set_page_config(
@@ -31,6 +33,10 @@ def index():
         if not st.session_state.news_source or not st.session_state.news_topic:
             st.warning('Please select the company name and a document type', icon=':material/warning:')
         else:
+            sections = ["Risk Factors", "About Our Company", "Financial Information", 
+                "Legal and Other Information", "Offer Related Information", 
+                "Other Information"]
+            extract_sections("1707994184221.pdf", sections, "output.txt")
             st.switch_page('pages/1_dashboard.py')
 
     st.markdown(

@@ -1,0 +1,67 @@
+{
+    "summary": {
+        "about_our_company": "Ixigo is a technology company focused on empowering Indian travelers by providing a platform to plan, book, and manage their trips across rail, air, buses, and hotels. They utilize AI, machine learning, and data science to offer personalized recommendations, travel utility tools, and services like train PNR status, seat availability alerts, flight status updates, and automated customer support.",
+        "risk_factors": "Ixigo's IPO involves several risks, including competition in the Indian OTA industry, dependence on technology, regulatory changes, potential conflicts of interest in related party transactions, reliance on third-party services, and potential fluctuations in quarterly results due to seasonality.",
+        "financial_information": "Ixigo's financial information is presented in accordance with Ind AS. The company has acquired several businesses, including Confirm Ticket, AbhiBus, and FreshBus.  The Restated Financial Statements include consolidation adjustments and eliminations. Key performance indicators include Restated earnings per share, Return on Net Worth, Net Asset Value per share, and EBITDA Margin.",
+        "legal_and_other_information": "Ixigo has obtained various approvals for its business, including tax-related approvals, labor and employee-related registrations, Importer-Exporter Code, and office registrations. The company is subject to Indian laws and regulations, including the Competition Act, 2002.  There are no material outstanding litigations or dues to material creditors as of the date of the Draft Red Herring Prospectus.",
+        "offer_related_information": "The Equity Shares offered in the IPO will be subject to the provisions of the Companies Act 2013, the SEBI ICDR Regulations, and other applicable laws. The offer price will be determined through a book building process. Shareholders will have the right to receive dividends, attend general meetings, and exercise voting powers.",
+        "other_information": "Material contracts and documents for inspection include the offer agreement, registrar agreement, monitoring agency agreement, cash escrow agreement, share escrow agreement, syndicate agreement, and underwriting agreement. Other material documents include certified copies of the Memorandum of Association and Articles of Association, board resolutions, shareholder resolutions, and annual reports."
+    },
+    "key_points": {
+        "1": "Ixigo is a technology company focused on empowering Indian travelers by providing a platform to plan, book, and manage their trips across various modes of transportation and accommodation.",
+        "2": "The company utilizes AI, machine learning, and data science to offer personalized recommendations, travel utility tools, and services like train PNR status, seat availability alerts, flight status updates, and automated customer support.",
+        "3": "Ixigo is the leading OTA for the \u2018next billion users\u2019, with a focus on localized content and app features that cater to Tier II/Tier III travelers.",
+        "4": "The company was the second largest OTA in India in terms of consolidated revenue from operations in Fiscal 2023.",
+        "5": "Ixigo's IPO involves several risks, including competition in the Indian OTA industry, dependence on technology, regulatory changes, potential conflicts of interest in related party transactions, reliance on third-party services, and potential fluctuations in quarterly results due to seasonality.",
+        "6": "The company has acquired several businesses, including Confirm Ticket, AbhiBus, and FreshBus, which are reflected in its Restated Financial Statements.",
+        "7": "Key performance indicators include Restated earnings per share, Return on Net Worth, Net Asset Value per share, and EBITDA Margin.",
+        "8": "Ixigo has obtained various approvals for its business, including tax-related approvals, labor and employee-related registrations, Importer-Exporter Code, and office registrations.",
+        "9": "The offer price will be determined through a book building process, and shareholders will have the right to receive dividends, attend general meetings, and exercise voting powers."
+    },
+    "financial_performance": {
+        "Restated earnings per equity share (basic)": {
+            "value": "0.25",
+            "unit": "\u20b9"
+        },
+        "Restated earnings per equity share (diluted)": {
+            "value": "0.25",
+            "unit": "\u20b9"
+        },
+        "Restated profit / (loss) for the year": {
+            "value": "75.33",
+            "unit": "\u20b9 million"
+        },
+        "Return on Net Worth (RoNW)": {
+            "value": "24.13",
+            "unit": "%"
+        },
+        "Net Asset Value (NAV) per Equity Share": {
+            "value": "1.02",
+            "unit": "\u20b9"
+        },
+        "Weighted average number of equity shares (basic)": {
+            "value": "289,609,793",
+            "unit": "shares"
+        },
+        "Weighted average number of equity shares (diluted)": {
+            "value": "292,875,393",
+            "unit": "shares"
+        },
+        "EBITDA": {
+            "value": "61.43",
+            "unit": "\u20b9 million"
+        },
+        "EBITDA Margin": {
+            "value": "4.44",
+            "unit": "%"
+        },
+        "Adjusted EBITDA": {
+            "value": "82.10",
+            "unit": "\u20b9 million"
+        },
+        "Adjusted EBITDA Margin": {
+            "value": "6.06",
+            "unit": "%"
+        }
+    }
+}
