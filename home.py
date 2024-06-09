@@ -36,7 +36,7 @@ def index():
             sections = ["Risk Factors", "About Our Company", "Financial Information", 
                 "Legal and Other Information", "Offer Related Information", 
                 "Other Information"]
-            extract_sections("1707994184221.pdf", sections, "output.txt")
+            extract_sections("new_source.pdf", sections, "output.txt")
             st.switch_page('pages/1_dashboard.py')
 
     st.markdown(
@@ -112,7 +112,7 @@ def index():
     st.markdown(
         """
         <footer style='text-align: center; margin-top: 40px;'>
-            <p>Powered by Gemini</p>
+            <p>Made with ♥️ Powered by Gemini</p>
             <a href="https://github.com/areebahmeddd/GodsEye/blob/main/LICENSE">License</a> •
             <a href="https://github.com/areebahmeddd/GodsEye/blob/main/README.md">Documentation</a>
         </footer>

@@ -31,5 +31,16 @@ def feedback():
                 st.warning('Please fill in all the fields', icon=':material/warning:')
             else:
                 st.success("Thank you! We've received your message and will get back to you soon :)", icon=':material/check_circle:')
+        
+    st.markdown(
+        """
+        <footer style='text-align: center; margin-top: 40px;'>
+            <p>Made with ♥️ Powered by Gemini</p>
+            <a href="https://github.com/areebahmeddd/GodsEye/blob/main/LICENSE">License</a> •
+            <a href="https://github.com/areebahmeddd/GodsEye/blob/main/README.md">Documentation</a>
+        </footer>
+        """,
+        unsafe_allow_html=True
+    )
 
 feedback()

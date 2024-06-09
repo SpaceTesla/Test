@@ -81,5 +81,15 @@ By integrating these technologies, StockDragon Gen 1 delivers a powerful tool fo
         unsafe_allow_html=True
     )
     st.image('design.drawio.png', caption='System Design', use_column_width=True)
+    st.markdown(
+        """
+        <footer style='text-align: center; margin-top: 40px;'>
+            <p>Made with ♥️ Powered by Gemini</p>
+            <a href="https://github.com/areebahmeddd/GodsEye/blob/main/LICENSE">License</a> •
+            <a href="https://github.com/areebahmeddd/GodsEye/blob/main/README.md">Documentation</a>
+        </footer>
+        """,
+        unsafe_allow_html=True
+    )
 
 technology()

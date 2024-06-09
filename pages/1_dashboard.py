@@ -62,15 +62,15 @@ def search():
             text_area+= f"{key}: {value}\n\n"
         st.text_area('Document Summary', value=text_area, height=400, help='Powered by Gemini')
     
-    if (st.button('Download Summary', use_container_width=True)):
-        with open("summary.json", "r") as file:
-            summary_data = json.load(file)
+    # if (st.button('Download Summary', use_container_width=True)):
+    #     with open("summary.json", "r") as file:
+    #         summary_data = json.load(file)
 
-        with open("summary_text.txt", "w") as file:
-            file.write(summary_data)
+    #     with open("summary_text.txt", "w") as file:
+    #         file.write(summary_data)
 
-        create_pdf("summary_text.txt", "summary.pdf")
-        st.success('Summary downloaded successfully!', icon=':material/check_circle:')
+    #     create_pdf("summary_text.txt", "summary.pdf")
+    #     st.success('Summary downloaded successfully!', icon=':material/check_circle:')
 
     st.divider()
 
@@ -105,11 +105,11 @@ def search():
         st.write('Headquarters: Gurugram, Haryana, India')
         st.write('Industry: Travel and Tourism')
         st.markdown(
-            "Website: [:blue[ixigo.com]](https://www.ixigo.com/)"
+            "Website: https://www.ecorentacar.com/about-us/"
         )
         st.write('Stock Exchange: BSE, NSE')
-        st.write('Stock Symbol: [:green[IXIGO]]')
-        st.write('Market Cap: [:orange[₹ 3,000 Cr]]')
+        st.write('Stock Symbol: [:green[ECOS]]')
+        st.write('Market Cap: [:orange[₹ 1,000 Cr]]')
         st.write('Revenue: [:red[₹ 500 Cr]]')
         st.write('Employees: [:violet[500+]]')
         st.write('Company Type: [:gray[Public]]')
@@ -213,5 +213,15 @@ def search():
     #         st.write(':green[AI Generated] Content: Unavailable')
 
     st.divider()
+    st.markdown(
+        """
+        <footer style='text-align: center; margin-top: 40px;'>
+            <p>Made with ♥️ Powered by Gemini</p>
+            <a href="https://github.com/areebahmeddd/GodsEye/blob/main/LICENSE">License</a> •
+            <a href="https://github.com/areebahmeddd/GodsEye/blob/main/README.md">Documentation</a>
+        </footer>
+        """,
+        unsafe_allow_html=True
+    )
 
 search()
