@@ -1,0 +1,28 @@
+{
+    "company_names": [
+        "CarTrade Tech",
+        "Delhivery",
+        "Fino Payments Bank",
+        "Gland Pharma",
+        "Nazara Technologies",
+        "Nykaa (FSN E-Commerce Ventures)",
+        "Paytm (One97 Communications)",
+        "Policybazaar (PB Fintech)",
+        "Sapphire Foods India",
+        "Zomato"
+    ],
+    "document_types": [
+        "Draft Red Herring Prospectus (DRHP)",
+        "Red Herring Prospectus (RHP)",
+        "Prospectus",
+        "Offer Document",
+        "Underwriting Agreement",
+        "Subscription Agreement",
+        "Shareholder Agreements",
+        "Legal Opinions",
+        "Comfort Letters",
+        "Due Diligence Reports",
+        "Escrow Agreement",
+        "Lock-Up Agreement"
+    ]
+}
