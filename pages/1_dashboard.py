@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import json
 import random
+from create_pdf import create_pdf
 
 st.set_page_config(
         page_title='Gods Eye - Dashboard',
@@ -61,7 +62,15 @@ def search():
             text_area+= f"{key}: {value}\n\n"
         st.text_area('Document Summary', value=text_area, height=400, help='Powered by Gemini')
     
-    st.button('Download Summary', use_container_width=True)
+    if (st.button('Download Summary', use_container_width=True)):
+        with open("summary.json", "r") as file:
+            summary_data = json.load(file)
+
+        with open("summary_text.txt", "w") as file:
+            file.write(summary_data)
+
+        create_pdf("summary_text.txt", "summary.pdf")
+        st.success('Summary downloaded successfully!', icon=':material/check_circle:')
 
     st.divider()
 
@@ -203,6 +212,6 @@ def search():
     #     else:
     #         st.write(':green[AI Generated] Content: Unavailable')
 
-st.divider()
+    st.divider()
 
 search()
